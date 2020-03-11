@@ -3,25 +3,19 @@ import VueRouter from 'vue-router';
 
 Vue.use(VueRouter);
 
-const Read = () => import(/* webpackChunkName: "Read" */ '@/components/Read.vue');
-const Create = () => import(/* webpackChunkName: "Create" */ '@/components/Create.vue');
-const Detail = () => import(/* webpackChunkName: "Detail" */ '@/components/Detail.vue');
+const Home = () => import(/* webpackChunkName: "Home" */ '@/views/Home.vue');
+const Board = () => import(/* webpackChunkName: "Board" */ '@/components/Board.vue');
 
 const routes = [
     {
         path: '/',
-        name: 'Read',
-        component: Read
+        name: 'Home',
+        component: Home
     },
     {
-        path: '/create/:contentId?',
-        name: 'Create',
-        component: Create
-    },
-    {
-        path: '/detail/:contentId',
-        name: 'Detail',
-        component: Detail
+        path: '/board',
+        name: 'Board',
+        component: Board
     }
 ];
 
