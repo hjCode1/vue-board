@@ -3,19 +3,13 @@ import VueRouter from 'vue-router';
 
 Vue.use(VueRouter);
 
-const Home = () => import(/* webpackChunkName: "Home" */ '@/views/Home.vue');
-const Board = () => import(/* webpackChunkName: "Board" */ '@/components/Board.vue');
+const BoardList = () => import(/* webpackChunkName: "BoardList" */ '@/components/board/BoardList.vue');
 
 const routes = [
     {
         path: '/',
-        name: 'Home',
-        component: Home
-    },
-    {
-        path: '/board',
-        name: 'Board',
-        component: Board
+        name: 'BoardList',
+        component: BoardList
     }
 ];
 
